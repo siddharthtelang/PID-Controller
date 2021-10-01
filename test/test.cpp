@@ -15,17 +15,17 @@
 TEST(PIDTest, test_computeOutput) {
   PID pid;
   double output = pid.computeOutput(0, 1);
-  EXPECT_NEAR(0.0, output, 0.5);
+  EXPECT_NEAR(4.0, output, 0.5);
 }
 
 TEST(PIDTest, test_calculateErrorIntegral) {
   PID pid;
   double output = pid.calculateErrorIntegral(0, 1);
-  EXPECT_NEAR(1.0, output, 0.5);
+  EXPECT_NEAR(0.0, output, 0.5);
 }
 
 TEST(PIDTest, test_calculateErrorDerivative) {
   PID pid;
   double output = pid.calculateErrorDerivative(0, 1);
-  EXPECT_NEAR(2.0, output, 0.5);
+  EXPECT_NEAR(0.0, output, 0.5);
 }
