@@ -14,8 +14,10 @@
 #include <pid.hpp>
 
 int main() {
-    PID pid(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
-    std::cout << pid.computeOutput(0, 1) << std::endl;
+    PID pid(0.5, 0.4, 0.6, 1.0, -20.0, 20.0);
+    double output = pid.computeOutput(0, 5);
+    output = pid.computeOutput(output, 5);
+    output = pid.computeOutput(output, 5);
+
     return 0;
 }
-
