@@ -12,10 +12,13 @@
 
 #include <pid.hpp>
 
-PID::PID(double Kp, double Ki, double Kd, double dt, double previous_error,
-        double integral_sum, double min, double max) :_Kp{Kp}, _Ki{Ki},
-            _Kd{Kd}, _dt{dt}, _previous_error{previous_error},
-                _integral_sum{integral_sum}, _min{min}, _max{max} {
+PID::PID(double Kp, double Ki, double Kd, double dt, double min,
+        double max) :_Kp{Kp}, _Ki{Ki}, _Kd{Kd}, _dt{dt},
+                _min{min}, _max{max} {
+    // TODO(Pair_B) : If dt <=0 - throw domain error
+    // TODO(Pair_B) : If gains <=0 - throw domain error
+    // TODO(Pair_B) : add check parameters
+    checkParameters();
 }
 
 double PID::getKp() {return _Kp;}
@@ -32,9 +35,12 @@ double PID::calculateErrorDerivative(double initial_state, double final_state) {
     return 0.0;
 }
 
+void PID::checkParameters() {
+}
+
 double PID::computeOutput(double initial_state, double final_state) {
     // TODO(Pair_B): calculate the derivative, integral and proportioanl error
     // and update the integral sum and previous error
     // TODO(Pair_B): clip output to min / max if less than / greater than
-    return 4.0;
+    return -1;
 }

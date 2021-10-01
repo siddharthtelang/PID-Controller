@@ -10,6 +10,8 @@
  * 
  */
 #pragma once
+#include <iostream>
+#include <stdexcept>
 
 class PID {
  private:
@@ -28,8 +30,7 @@ class PID {
      * @param previous_error (double) previous error
      * @param integral_sum (double)  the integration summation
      */
-    PID(double Kp, double Ki, double Kd, double dt, double previous_error,
-         double integral_sum, double min, double max);
+    PID(double Kp, double Ki, double Kd, double dt, double min, double max);
     /**
      * @brief Calculates the error integral
      * 
@@ -72,4 +73,9 @@ class PID {
      * @return double 
      */
     double getKi();
+    /**
+     * @brief 
+     * 
+     */
+    void checkParameters();
 };
