@@ -38,7 +38,7 @@ class PID {
      * @param final_state (double) - final state
      * @return (double) - error integral
      */
-    double calculateErrorIntegral(double initial_state, double final_state);
+    double calculateErrorIntegral(double error);
     /**
      * @brief Calculates the error derivative
      * 
@@ -46,7 +46,7 @@ class PID {
      * @param final_state (double) - final state
      * @return double (double) - error derivative
      */
-    double calculateErrorDerivative(double initial_state, double final_state);
+    double calculateErrorDerivative(double error);
     /**
      * @brief calculates the velocity output
      * 
