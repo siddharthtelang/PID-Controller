@@ -14,7 +14,7 @@
 #include <pid.hpp>
 
 int main() {
-    PID pid;
+    PID pid(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
     std::cout << pid.computeOutput(0, 1) << std::endl;
     return 0;
 }

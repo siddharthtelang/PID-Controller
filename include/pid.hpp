@@ -14,7 +14,8 @@
 class PID {
  private:
     double _Kp, _Ki, _Kd, _dt;
-    double previous_error {}, integral{};
+    double _previous_error {}, _integral_sum{};
+    double _min, _max;
 
  public:
     /**
@@ -24,9 +25,11 @@ class PID {
      * @param Ki (double) - Integral constant
      * @param Kd (double) - Derivative constant
      * @param dt (double) - time
+     * @param previous_error (double) previous error
+     * @param integral_sum (double)  the integration summation
      */
-    explicit PID(double Kp = 0.0, double Ki = 0.0, double Kd = 0.0,
-         double dt = 1.0) :_Kp{Kp}, _Ki{Ki}, _Kd{Kd}, _dt{dt} {}
+    PID(double Kp, double Ki, double Kd, double dt, double previous_error,
+         double integral_sum, double min, double max);
     /**
      * @brief Calculates the error integral
      * 
@@ -51,4 +54,22 @@ class PID {
      * @return (double) - final velocity
      */
     double computeOutput(double initial_state, double final_state);
+    /**
+     * @brief Get the Kp parameter
+     * 
+     * @return double 
+     */
+    double getKp();
+    /**
+     * @brief Get the Kd parameter
+     * 
+     * @return double 
+     */
+    double getKd();
+    /**
+     * @brief Get the Ki parameter
+     * 
+     * @return double 
+     */
+    double getKi();
 };
