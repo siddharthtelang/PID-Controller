@@ -14,11 +14,6 @@
 #include <stdexcept>
 
 class PID {
- private:
-    double _Kp, _Ki, _Kd, _dt;
-    double _previous_error {}, _integral_sum{};
-    double _min, _max;
-
  public:
     /**
      * @brief Construct a new PID object
@@ -78,4 +73,9 @@ class PID {
      * 
      */
     void checkParameters();
+
+ private:
+    double _Kp, _Ki, _Kd, _dt;
+    double _previous_error {}, _integral_sum{};
+    double _min, _max;
 };

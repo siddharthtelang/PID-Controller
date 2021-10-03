@@ -15,10 +15,7 @@
 PID::PID(double Kp, double Ki, double Kd, double dt, double min,
         double max) :_Kp{Kp}, _Ki{Ki}, _Kd{Kd}, _dt{dt},
                 _min{min}, _max{max} {
-    // TODO(Pair_B) : add check parameters
-    // checkParameters();
-    // TODO(Pair_B) : If dt <=0 - throw domain error
-    // TODO(Pair_B) : If gains <=0 - throw domain error
+    checkParameters();
 }
 
 double PID::getKp() {return _Kp;}
@@ -36,9 +33,15 @@ double PID::calculateErrorDerivative(double error) {
 }
 
 void PID::checkParameters() {
+    if (_dt <= 0.0) {
+        throw std::domain_error("dt must be positive and non-zero");
+    } else if (_Kp <= 0 || _Ki <= 0 || _Kd <= 0) {
+        throw std::domain_error("gains must be positive and non-zero");
+    }
 }
 
 double PID::computeOutput(double initial_state, double final_state) {
+    // checkParameters();
     // TODO(Pair_B): calculate the derivative, integral and proportioanl error
     // TODO(Pair_B): calculate the output
     // and update the integral sum and previous error
