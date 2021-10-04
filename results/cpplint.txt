@@ -1,0 +1,7 @@
+siddharth@siddharth:~/ENPM808X/new/PID-Controller$ cpplint $( find . -name *.cpp -or -name *.hpp | grep -vE -e "^./build/" -e "^./vendor/" )
+Done processing ./app/main.cpp
+Done processing ./app/pid.cpp
+Done processing ./include/pid.hpp
+Done processing ./test/main.cpp
+Done processing ./test/test.cpp
+
