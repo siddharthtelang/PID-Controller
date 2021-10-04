@@ -10,6 +10,10 @@ Pair A:
 - Siddharth Telang --driver
 - Dani Lerner --navigator
 
+Pair B:
+- Rishabh Mukund --driver
+- Maaruf Vazifdar --navigator
+
 ## Overview
 
 An implementation of simple PID Controller including GTest, Travis CI, and
@@ -36,7 +40,7 @@ Run tests: ./test/cpp-test
 Run program: ./app/shell-app
 ```
 
-## Building for code coverage (for assignments beginning in Week 4)
+## Building for code coverage
 ```
 sudo apt-get install lcov
 cmake -D COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug ../
