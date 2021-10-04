@@ -69,7 +69,7 @@ class PID {
      */
     double getKi();
     /**
-     * @brief 
+     * @brief check parameters
      * 
      */
     void checkParameters();
