@@ -67,6 +67,9 @@ cppcheck --enable=all --std=c++11 -I include/ --suppress=missingIncludeSystem $(
 cpplint $( find . -name *.cpp -or -name *.hpp | grep -vE -e "^./build/" -e "^./vendor/" )
 
 ```
+## Doxygen folder
+- doxygen_folder
+
 ## Working with Eclipse IDE ##
 
 ## Installation
