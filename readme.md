@@ -1,6 +1,6 @@
 # PID Controller
 [![Build Status](https://app.travis-ci.com/siddharthtelang/PID-Controller.svg?branch=development)](https://app.travis-ci.com/siddharthtelang/PID-Controller)
-[![Coverage Status](https://coveralls.io/repos/github/siddharthtelang/PID-Controller/badge.svg?branch=development)](https://coveralls.io/github/siddharthtelang/PID-Controller?branch=development)
+[![Coverage Status](https://coveralls.io/repos/github/siddharthtelang/PID-Controller/badge.png?branch=development)](https://coveralls.io/github/siddharthtelang/PID-Controller?branch=development)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ---
 
