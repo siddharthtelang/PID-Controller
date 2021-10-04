@@ -56,7 +56,7 @@ TEST(PIDTest, test_computeOutput) {
   ASSERT_NEAR(-4.75, output, 0.5);
 
   output = pid.computeOutput(output, 5);
-  ASSERT_NEAR(19.125, output, 0.5);
+  ASSERT_NEAR(17.125, output, 0.5);
 }
 
 TEST(SaturationTest, test_computeOutput) {
